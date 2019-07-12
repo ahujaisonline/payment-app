@@ -2,7 +2,7 @@
 
   <div class="form-item">
     <label for="name">Name</label>
-    <input formControlName="name" id="name" />
+    <input formControlName="name" restricted-input="[0-9]" id="name" />
     <span class="help-block"
       *ngIf="paymentForm.controls.name?.errors?.required && paymentForm.controls.name.touched">This field is
       required!</span>
@@ -12,7 +12,7 @@
   </div>
   <div class="form-item">
     <label for="cardno">Card No</label>
-    <input formControlName="cardno" id="cardno" type="text" />
+    <input restricted-input="[A-Za-z]" formControlName="cardno" id="cardno" type="text" />
     <span class="help-block"
       *ngIf="paymentForm.controls.cardno?.errors?.required && paymentForm.controls.cardno.touched">This field is
       required!</span>
@@ -22,7 +22,7 @@
   </div>
   <div class="form-item">
     <label for="cvv">Cvv</label>
-    <input formControlName="cvv" id="cvv" type="number" />
+    <input restricted-input="[A-Za-z]" formControlName="cvv" id="cvv" type="text" />
      <span class="help-block"
       *ngIf="paymentForm.controls.cvv?.errors?.required && paymentForm.controls.cvv.touched">This field is
       required!</span>

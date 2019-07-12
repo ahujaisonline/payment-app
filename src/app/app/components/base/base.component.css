@@ -3,6 +3,7 @@
   width: 50%;
   margin: 43px auto;
   background: lightgrey;
+  min-height: 500px;
 }
 .left {
     flex-basis: 20%;

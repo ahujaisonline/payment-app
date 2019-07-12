@@ -33,18 +33,19 @@ export class CardFormComponent implements OnInit {
           this.paymentForm.get('cardno').patchValue(dashedNo, { emitEvent: false });
         }
         else {
-          
-          this.paymentForm.get('cardno').patchValue(cardval.substring(0,19) , { emitEvent: false });
+
+          this.paymentForm.get('cardno').patchValue(cardval.substring(0, 19), { emitEvent: false });
         }
       }
     })
   }
 
+
   createForm() {
     this.paymentForm = this.fb.group({
       name: ['', [Validators.required, this.restrictInputLength(10)]],
-      cardno: ['',[Validators.required, this.restrictInputLength(19)]],
-      cvv:  ['',[Validators.required, this.restrictInputLength(3)]],
+      cardno: ['', [Validators.required, this.restrictInputLength(19)]],
+      cvv: ['', [Validators.required, this.restrictInputLength(3)]],
       date: ['', Validators.required]
     });
 
