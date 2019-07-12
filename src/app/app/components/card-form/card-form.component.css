@@ -1,0 +1,32 @@
+.form-item{
+    text-align: left;
+    padding: 20px;
+}
+
+label{
+    padding: 5px;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.btn{
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+button{
+
+    padding: 10 16px;
+    font-size: 14px;
+    line-height: 1.4;
+    border-radius: 2px;
+}
+
+.help-block{
+    color: red;
+    padding-left: 6px;
+    padding-top: 4px;
+    display: block;
+    font-size: 14px;
+}

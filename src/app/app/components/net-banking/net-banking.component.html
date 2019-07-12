@@ -1,0 +1,11 @@
+<div class="search-wrapper">
+  <input type="text" [formControl]="searchControl" 
+    class="search-input" #ser placeholder="Search banks">
+    <button (click)="filteredBanks = [];ser.value= '';">reset</button>
+</div>
+
+<div *ngFor="let bank of filteredBanks">
+  <div class="">
+    {{bank.name}} - {{bank.add}}
+  </div>
+</div>

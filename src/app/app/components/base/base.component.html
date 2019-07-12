@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="left">
+    <div class="tab" (click)="tabChange(tab.name)" [ngClass]="{'active': tab.active}" *ngFor="let tab of tabs;">
+      {{tab.name}}
+    </div>
+  </div>
+  <div class="right">
+    <ng-container *ngFor="let tab of tabs;">
+      <div *ngIf="tab.active" class="tab-container">
+        <div *ngIf="tab.id == 1">
+          <h2>{{tab.name}}</h2>
+          <app-card-form [activeTab]="tab"></app-card-form>
+        </div>
+         <div *ngIf="tab.id == 2">
+          <h2>{{tab.name}}</h2>
+          <app-net-banking [activeTab]="tab"></app-net-banking>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

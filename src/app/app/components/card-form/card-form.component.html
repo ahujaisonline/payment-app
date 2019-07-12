@@ -1,0 +1,42 @@
+<form [formGroup]="paymentForm" (ngSubmit)="onClickSubmit()">
+
+  <div class="form-item">
+    <label for="name">Name</label>
+    <input formControlName="name" id="name" />
+    <span class="help-block"
+      *ngIf="paymentForm.controls.name?.errors?.required && paymentForm.controls.name.touched">This field is
+      required!</span>
+    <span class="help-block"
+      *ngIf="paymentForm.controls.name.touched && !paymentForm.controls.name?.errors?.required &&  paymentForm.controls.name?.errors?.exceededLimit">Limit
+      should not exceed 10.</span>
+  </div>
+  <div class="form-item">
+    <label for="cardno">Card No</label>
+    <input formControlName="cardno" id="cardno" type="text" />
+    <span class="help-block"
+      *ngIf="paymentForm.controls.cardno?.errors?.required && paymentForm.controls.cardno.touched">This field is
+      required!</span>
+    <span class="help-block"
+      *ngIf="paymentForm.controls.cardno.touched && !paymentForm.controls.cardno?.errors?.required &&  paymentForm.controls.cardno?.errors?.exceededLimit">Limit
+      should not exceed 16.</span>
+  </div>
+  <div class="form-item">
+    <label for="cvv">Cvv</label>
+    <input formControlName="cvv" id="cvv" type="number" />
+     <span class="help-block"
+      *ngIf="paymentForm.controls.cvv?.errors?.required && paymentForm.controls.cvv.touched">This field is
+      required!</span>
+    <span class="help-block"
+      *ngIf="paymentForm.controls.cvv.touched && !paymentForm.controls.cvv?.errors?.required &&  paymentForm.controls.cvv?.errors?.exceededLimit">Limit
+      should not exceed 3.</span>
+  </div>
+  <div class="form-item">
+    <label for="date"> Exp Date</label>
+    <input formControlName="date" id="date" type="month" min="2019-07" />
+  </div>
+  <br />
+  <div class="btn">
+    <button [disabled]="paymentForm.invalid">Procced </button>
+  </div>
+
+</form>

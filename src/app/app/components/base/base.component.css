@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  width: 50%;
+  margin: 43px auto;
+  background: lightgrey;
+}
+.left {
+    flex-basis: 20%;
+    text-align: center;
+    border-right: 1px solid grey;
+}
+.right {
+    flex-basis: 80%;
+    text-align: center;
+}
+.tab{
+    padding: 20px;
+}
+.active{
+    border-bottom: 1px solid blue;
+    background-color: lightblue;
+}
